@@ -3,7 +3,7 @@ public class Mang {
 
     public static void printArray() {
         for (String x : array) {
-            System.out.println(x);
+            System.out.println(x );
         }
     }
 }

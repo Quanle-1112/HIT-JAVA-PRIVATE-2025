@@ -19,7 +19,7 @@ public class Main {
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
-            System.out.print("Nhap phan tu thu " + (i + 1) + ": ");
+            System.out.print("Nhap phan tu thu " + (i + 1) + " : ");
             arr[i] = sc.nextInt();
         }
         int sum =0;
