@@ -26,7 +26,7 @@ public class Main {
         else {
             int gio = SoGiay/3600;
             int phut = SoGiay % 3600;
-            int giay = phut/60;
+            int giay = phut/ 60;
             System.out.println(gio + " gio " + phut + " phut " + giay + " giay ");
         }
     }
