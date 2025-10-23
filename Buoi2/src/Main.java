@@ -14,6 +14,7 @@ public class Main {
 
         System.out.print("Nhap so luong phan tu cua day: ");
         int n = sc.nextInt();
+        Mang.printArray();
 
         int[] arr = new int[n];
 
