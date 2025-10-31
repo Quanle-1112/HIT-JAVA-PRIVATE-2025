@@ -17,7 +17,6 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    // Getter và Setter
     public String getId() {
         return id;
     }

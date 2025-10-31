@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         List<User> users = new ArrayList<>();
-        // Tạo sẵn 5 user mẫu
         users.add(new User("1", "haki", "123", "haki@gmail.com", "0123456789"));
         users.add(new User("2", "kayn", "123", "kayn@gmail.com", "0987654321"));
         users.add(new User("3", "boss", "123", "boss@gmail.com", "0111111111"));
