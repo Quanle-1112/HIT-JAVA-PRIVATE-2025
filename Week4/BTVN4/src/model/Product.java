@@ -1,13 +1,18 @@
+package model;
+
+import java.util.Random;
+
 public class Product {
     private int id;
     private String name;
     private String description;
     private double price;
 
-    public Product() {    }
+    public Product() {
+    }
 
-    public Product(int id, String name, String description, double price) {
-        this.id = id;
+    public Product(String name, String description, double price) {
+        this.id = new Random().nextInt(1000);
         this.name = name;
         this.description = description;
         this.price = price;
@@ -15,10 +20,6 @@ public class Product {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -45,14 +46,15 @@ public class Product {
         this.price = price;
     }
 
-    public Product getByID(int id) {
-        if(this.id ==id) {
-            return this;
-        }
-        return null;
+    public Product getById(int id) {
+        if (this.id != id) {
+            return  this;
+        } return null;
     }
 
     public String getInfo() {
-        return "ID: "+id+", Ten: "+name+", Mo ta: "+description+", Gia ban: "+price;
+        return "Ten: " + this.name + "\n" +
+                "Gia: " + this.price + "\n" +
+                "Mo ta" + this.description + "\n";
     }
 }
