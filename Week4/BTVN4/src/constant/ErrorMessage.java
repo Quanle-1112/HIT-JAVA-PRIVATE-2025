@@ -1,5 +1,3 @@
-//Xet tat ca cac truong hop
-
 package constant;
 
 public class ErrorMessage {

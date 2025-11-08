@@ -1,6 +1,3 @@
-//Truoc het nen lam menu truoc, khai bao trong main de hon
-//Liet ke cac yeu cau cua de
-
 package constant;
 
 public class Common {
