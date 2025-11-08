@@ -31,7 +31,7 @@ public class ProductController {
         if (Common.PRODUCT_LAPTOP_TYPE.equalsIgnoreCase(type)) {
             newProduct = new Laptop(name, description, price, Common.LAPTOP_RAM, Common.LAPTO_CPU);
         } else if (Common.PRODUCT_SMARTPHONE_TYPE.equalsIgnoreCase(type)) {
-              newProduct = new SmartPhone(name, description, price, true);
+            newProduct = new SmartPhone(name, description, price, true);
         } else {
             System.out.println(ErrorMessage.ERROR_INVALID_PRODUCT);
         }
