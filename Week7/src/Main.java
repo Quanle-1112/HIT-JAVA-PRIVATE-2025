@@ -1,4 +1,5 @@
 import constant.Common;
+import constant.SuccessMessage;
 import model.Developer;
 import model.Device;
 import model.Employee;
@@ -60,7 +61,10 @@ public  class Main {
                         }
                     }
                     break;
+                case 4:
+                    System.out.print("Da Thoat!");
+                    break;
             }
-        }   while (choice != 3) ;
+        }   while (choice != 4) ;
     }
 }
