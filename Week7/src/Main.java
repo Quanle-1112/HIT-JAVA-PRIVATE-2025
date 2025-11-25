@@ -1,5 +1,6 @@
 import constant.Common;
 import model.Developer;
+import model.Device;
 import model.Employee;
 import service.IEmployeeService;
 import service.impl.IEmployeeServiceImpl;
@@ -11,6 +12,12 @@ import java.util.Scanner;
 public  class Main {
     public static ArrayList<Employee> employees = new ArrayList<>();
     public static void main(String[] args) {
+        employees.add(new Developer("1", "Quan",19, 1000, new Device("112","laptop"), 10));
+        employees.add(new Developer("2", "Hoang",20, 3000, new Device("113","mobi"), 11));
+        employees.add(new Developer("3", "Nam",21, 2000, new Device("114","lap"), 12));
+        employees.add(new Developer("4", "Hung",22, 4000, new Device("115","may"), 13));
+        employees.add(new Developer("5", "Anh",23, 5000, new Device("116","dth"), 14));
+
         Scanner sc = new Scanner(System.in);
         IEmployeeService iEmployeeService = new IEmployeeServiceImpl();
         int choice;

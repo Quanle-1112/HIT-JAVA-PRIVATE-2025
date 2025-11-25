@@ -2,9 +2,9 @@ package constant;
 
 public class Common {
     public static String MENU = "\n---MENU---\n" +
-            "1.In ra danh sach tat ca nhan vien\n" +
-            "2.In ra thong tin nhan vien theo id\n" +
-            "3. Loc ra danh sach nhan vien theo ten\n" +
+            "1.In ra thong tin nhan vien theo id\n" +
+            "2.In ra thong tin nhan vien theo ten\n" +
+            "3. In ra danh sach tat ca nhan vien\n" +
             "4. Thoat\n" +
             "Chon lua chon: ";
 
