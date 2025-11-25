@@ -28,11 +28,15 @@ public class IEmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public List<Employee> getEmployeeByName(String name) {
+        List<Employee> result = new ArrayList<>();
         for (Employee employee: employees) {
-            if (employee.getName().equals(name)) {
-                System.out.println(SuccessMessage.SUCCESS_NAME_FOUNDED+name);
-                return employees;
+            if (employee.getName().equalsIgnoreCase(name)) {
+                result.add(employee);
             }
+        }
+        if(!result.isEmpty()) {
+            System.out.println(SuccessMessage.SUCCESS_NAME_FOUNDED + name);
+            return result;
         }
         return null;
     }

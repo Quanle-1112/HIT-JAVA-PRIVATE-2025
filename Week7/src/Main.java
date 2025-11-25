@@ -13,14 +13,14 @@ import java.util.Scanner;
 public  class Main {
     public static ArrayList<Employee> employees = new ArrayList<>();
     public static void main(String[] args) {
-        employees.add(new Developer("1", "Quan",19, 1000, new Device("112","laptop"), 10));
-        employees.add(new Developer("2", "Hoang",20, 3000, new Device("113","mobi"), 11));
-        employees.add(new Developer("3", "Nam",21, 2000, new Device("114","lap"), 12));
-        employees.add(new Developer("4", "Hung",22, 4000, new Device("115","may"), 13));
-        employees.add(new Developer("5", "Anh",23, 5000, new Device("116","dth"), 14));
-
         Scanner sc = new Scanner(System.in);
         IEmployeeService iEmployeeService = new IEmployeeServiceImpl();
+
+        iEmployeeService.getAllEmployees().add(new Developer("1", "Quan",19, 1000, new Device("112","laptop"), 10));
+        iEmployeeService.getAllEmployees().add(new Developer("2", "Hoang",20, 3000, new Device("113","mobi"), 11));
+        iEmployeeService.getAllEmployees().add(new Developer("3", "Nam",21, 2000, new Device("114","lap"), 12));
+        iEmployeeService.getAllEmployees().add(new Developer("4", "Hung",22, 4000, new Device("115","may"), 13));
+        iEmployeeService.getAllEmployees().add(new Developer("5", "Anh",23, 5000, new Device("116","dth"), 14));
         int choice;
         do {
             System.out.println(Common.MENU);
@@ -42,15 +42,17 @@ public  class Main {
                     }
                     break;
                 case 2:
-                    System.out.println(Common.ENTER_EMPLOYEE_NAME);
-                    int nameFound = Integer.parseInt(sc.nextLine());
-                    if (iEmployeeService.getEmployeeByID(String.valueOf(nameFound)) != null) {
-                        Employee foundnameEmployee = (Employee) iEmployeeService.getEmployeeByName(String.valueOf(nameFound));
-                        System.out.println(foundnameEmployee.toString());
-                    } else {
-                        System.out.println("Nhap ten sai");
+                System.out.println(Common.ENTER_EMPLOYEE_NAME);
+                String nameFound = sc.nextLine();
+                List<Employee> foundEmployees = iEmployeeService.getEmployeeByName(nameFound);
+                if (foundEmployees != null && !foundEmployees.isEmpty()) {
+                    for (Employee e : foundEmployees) {
+                        System.out.println(e);
                     }
-                    break;
+                } else {
+                    System.out.println("Nhap ten sai");
+                }
+                break;
                 case 3:
                     ArrayList<Employee> emp = (ArrayList<Employee>) iEmployeeService.getAllEmployees();
                     if (emp.isEmpty()) {
