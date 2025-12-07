@@ -55,6 +55,7 @@ public class Car implements Runnable{
             System.out.println(e.getMessage());
         } catch (InterruptedException e) {
             System.out.println(Message.ErrorMessage.INTERRUPTED_CAR_ERROR);
+            //e.printStackTrace()
         }
     }
 }
